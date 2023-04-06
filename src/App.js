@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     if (user){
-      db.collection("users").doc(user.iud).set({
+      db.collection("users").doc(user.uid).set({
         email: user.email,
         photoURL: user.photoURL,
       });
