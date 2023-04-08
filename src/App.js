@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import Chat from "./components/Chat";
+import Sidebar from "./components/Sidebar";
+import * as C from "./styles/app";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "./services/firebase";
 import Login from "./components/Login";
 import Loading from "./components/Loading";
-import Sidebar from "./components/Sidebar";
-import * as C from "./styles/app";
+
 
 const App = () => {
   const [user, loading] = useAuthState(auth);
@@ -26,6 +28,7 @@ const App = () => {
   return (
   <C.Container>
   <Sidebar setUserChat={setUserChat} userChat={userChat} />
+  <Chat userChat={userChat} />
   </C.Container>);
 };
 

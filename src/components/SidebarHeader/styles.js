@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 59px;
-  background-color: #f0f2f5;
+  background-color: black;
+  border-radius: 30px;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -24,7 +25,7 @@ export const Options = styled.div`
   svg {
     width: 24px;
     height: 24px;
-    color: #54656f;
+    color: white;
     cursor: pointer;
   }
 `;
